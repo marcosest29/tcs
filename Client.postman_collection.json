@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "040e1849-82bb-4186-bcdd-f41ba67fb012",
+		"name": "Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14537857"
+	},
+	"item": [
+		{
+			"name": "createClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Marcos Estrella\",\r\n    \"gender\": \"M\",\r\n    \"age\": 28,\r\n    \"identification\": \"1723347900\",\r\n    \"address\": \"Conocoto\",\r\n    \"phone\": \"0979226839\",\r\n    \"password\": 1234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/clientServices/api/v1/clients",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"clientServices",
+						"api",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateClient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Marcos Estrella\",\r\n    \"gender\": \"M\",\r\n    \"age\": 28,\r\n    \"identification\": \"17233479004\",\r\n    \"address\": \"Conocoto\",\r\n    \"phone\": \"0979226839\",\r\n    \"password\": 4567\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/clientServices/api/v1/clients/10",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"clientServices",
+						"api",
+						"v1",
+						"clients",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteClient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/clientServices/api/v1/clients/10",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"clientServices",
+						"api",
+						"v1",
+						"clients",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getClient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/clientServices/api/v1/clients/1",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"clientServices",
+						"api",
+						"v1",
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

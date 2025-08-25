@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "19412027-b66f-40ac-9a36-207074a42a9b",
+		"name": "Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14537857"
+	},
+	"item": [
+		{
+			"name": "createAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\": \"1234\",\r\n    \"type\": \"Ahorros\",\r\n    \"initialBalance\": 100.00,\r\n    \"clientId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/accounts",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccount",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"Ahorros\",\r\n    \"initialBalance\": 1150.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/accounts/123456",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"accounts",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/accounts/1234",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"accounts",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAccount",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/accounts/123456",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"accounts",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

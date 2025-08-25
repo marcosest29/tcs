@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "b6068a2f-7420-4ad6-9b28-32d87c32dee0",
+		"name": "Movement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14537857"
+	},
+	"item": [
+		{
+			"name": "createMovement",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": \"1234\",\r\n    \"type\": \"RETIRO\",\r\n    \"value\": -100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/movements",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"movements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateMovement",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": \"1234\",\r\n    \"type\": \"DEPOSITO\",\r\n    \"value\": 450\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/movements/7",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"movements",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/movements/7",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"movements",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMovement",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/movements/9",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"movements",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{dominio}}:{{puerto}}/accountServices/api/v1/reports?initialDate=2025-08-24&endDate=2025-08-25&identification=17233479001",
+					"protocol": "http",
+					"host": [
+						"{{dominio}}"
+					],
+					"port": "{{puerto}}",
+					"path": [
+						"accountServices",
+						"api",
+						"v1",
+						"reports"
+					],
+					"query": [
+						{
+							"key": "initialDate",
+							"value": "2025-08-24"
+						},
+						{
+							"key": "endDate",
+							"value": "2025-08-25"
+						},
+						{
+							"key": "identification",
+							"value": "17233479001"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
